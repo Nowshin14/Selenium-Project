@@ -1,22 +1,20 @@
-package com.batch;
+package com.batch.browsers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
-public class Firefoxinit {
+public class ChromeBrowserinit {
 
     WebDriver driver;
 
     @BeforeSuite
-    public void StartFirefoxBrowser() {
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+    public void StartChromeBrowser() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
 
     }
@@ -33,7 +31,4 @@ public class Firefoxinit {
         driver.close();
 
     }
-
-
 }
-

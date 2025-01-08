@@ -1,22 +1,21 @@
-package com.batch;
+
+package com.batch.browsers;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
-public class ChromeBrowserinit {
+public class Edgeinit {
 
     WebDriver driver;
 
     @BeforeSuite
-    public void StartChromeBrowser() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+    public void StartEdgeBrowser() {
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
         driver.manage().window().maximize();
 
     }
@@ -33,4 +32,7 @@ public class ChromeBrowserinit {
         driver.close();
 
     }
+
+
 }
+
