@@ -48,8 +48,9 @@ public class TestNG_New {
     }
 
     @BeforeSuite
-        public void beforeSuiteExample(){
+    public void beforeSuiteExample(){
         System.out.println("Before Suite Example");
     }
-    
+
 }
+
